@@ -59,7 +59,7 @@ function myfun(){
     
 }
 function result(val1){
-    document.querySelector('.winner').innerHTML=`<h2> 👑 Winner is 👑 ${val1}</h2>
+    document.querySelector('.winner').innerHTML=`<h2> 👑 Winner is ${val1} 👑</h2>
     <div><button  class='newgame' onclick="myfun()">NEW GAME</button></div>`
 }
 function disablebox()

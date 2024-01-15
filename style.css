@@ -73,7 +73,9 @@ h2{
         text-align: center;
         border-radius: 10px;
         font-weight: 700;
-         background: linear-gradient(to right,rgb(227, 89, 89),rgb(100, 163, 223));
+         /* background: linear-gradient(to right,rgb(227, 89, 89),rgb(100, 163, 223)); */
+         background-image: linear-gradient(to right, #d5e866, #aaec8e, #8becb5, #84e7d2, #95dfe1);
+         /* background-image: linear-gradient(to right, #d5ea5e, #c5d957, #b5c750, #a6b74a, #97a643); */
        /* background-color: rgb(253, 104, 253); */
         border: none;
     }
