@@ -1,6 +1,5 @@
 let btn=document.querySelectorAll('.eachbox');
 let move0=true;
-
 let winningOrder=[
     [0,1,2],
     [3,4,5],
@@ -32,12 +31,40 @@ btn.forEach((box)=>{
         // console.log(val2);
         // console.log(val3);
         if(val1!=='' && val2!==''&& val3!=='' )
-        if(val1===val2 &&val2===val3){
+  {
+        if(val1===val2 && val2===val3){
+            disablebox();
             console.log("Winner Winner Chicken Dinner");
-            document.querySelector('.hide').classList.add('winner')
+            console.log(val1);
+            document.querySelector('.hide').classList.add('winner');
+            result(val1);
         }
-
+    }
         }
         );
     })
 })
+function myfun(){
+    document.querySelector('.hide').classList.remove('winner')
+    winningOrder.forEach((arr)=>{
+        btn[arr[0]].innerText='';
+        btn[arr[1]].innerText='';
+        btn[arr[2]].innerText='';
+        btn.forEach((box)=>
+        {
+            box.disabled=false;
+        })
+
+    })
+    
+}
+function result(val1){
+    document.querySelector('.winner').innerHTML=`<h2> 👑 Winner is 👑 ${val1}</h2>
+    <div><button  class='newgame' onclick="myfun()">NEW GAME</button></div>`
+}
+function disablebox()
+{
+    btn.forEach((but)=>{
+        but.disabled=true;
+    })
+}
